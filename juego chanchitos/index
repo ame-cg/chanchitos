@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hipertexto Interactivo - El Orden de la Casa</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h2>Construye en el orden correcto para avanzar</h2>
+        <p class="instrucciones">Haz clic en los elementos en el orden secuencial en el que se debe asegurar la casa.</p>
+        
+        <!-- Contenedor de la secuencia que el usuario va armando -->
+        <div id="secuencia-usuario">
+            <span class="placeholder-nodo">1</span>
+            <span class="placeholder-nodo">2</span>
+            <span class="placeholder-nodo">3</span>
+            <span class="placeholder-nodo">4</span>
+        </div>
+
+        <!-- Tablero con los 4 nodos desordenados -->
+        <div id="tablero-nodos">
+            <div class="nodo" data-id="puerta">
+                <img src="img/puerta.png" alt="Puerta">
+            </div>
+            <div class="nodo" data-id="techo">
+                <img src="img/techo.png" alt="Techo">
+            </div>
+            <div class="nodo" data-id="cama">
+                <img src="img/cama.png" alt="Cama">
+            </div>
+            <div class="nodo" data-id="ladrillo">
+                <img src="img/ladrillo.png" alt="Ladrillo">
+            </div>
+        </div>
+
+        <button id="btn-reiniciar" class="oculto">Reiniciar Selección</button>
+
+        <!-- Pantallas de resultados para ramificar la historia -->
+        <div id="resultado-ganar" class="pantalla-resultado oculto">
+            <h3>¡Excelente elección!</h3>
+            <p>La casa resiste con firmeza el soplido del lobo feroz. Lograste avanzar con seguridad.</p>
+            <a href="historia-victoria.html" class="btn-historia">Continuar Relato (Camino A)</a>
+        </div>
+
+        <div id="resultado-perder" class="pantalla-resultado oculto">
+            <h3>Estructura deficiente...</h3>
+            <p>El orden inestable hizo que la casa se derrumbara ante el menor suspiro del lobo.</p>
+            <a href="historia-derrota.html" class="btn-historia">Continuar Relato (Camino B)</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
